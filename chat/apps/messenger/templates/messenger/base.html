@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Чатик{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+    <div class="wrapper">
+        <header></header>
+        <dim class="content">{% block content %}{% endblock %}</dim>
+        <footer></footer>
+    </div>
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

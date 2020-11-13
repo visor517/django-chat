@@ -1,0 +1,31 @@
+{% extends 'messenger/base.html' %}
+
+{% block title %}Чатик{% endblock %}
+
+{% block content %}
+    <div class="messenger">
+        <div class="messenger_layout">
+            <div class="messenger_slider">
+                {% if latest_messages_list %}
+                    {% for m in latest_messages_list %}
+                        <div class="messenger_messageWrapper">
+                            <div class="messenger_messageBox">
+                                <b>{{m.message_author}}</b><br>{{m.message_text}}<div class="messenger_messageTime">{{m.message_time|time}}</div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    Пусто
+                {% endif %}
+            </div>
+        </div>
+        <form action="{% url 'messenger:leave_message' %}" method="POST">
+
+            {% csrf_token %}
+
+            <input type="text" required placeholder="Ваше имя" name="name">
+            <textarea name="text" required placeholder="Сообщение" cols="30" rows="5"></textarea>
+            <button type="submit" class="buttones">Отправить</button>
+        </form>
+    </div>
+{% endblock %}

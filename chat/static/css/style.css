@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gray;
+    height: 100%;
+}
+
+html {height: 100%;}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header, footer {
+    background-color: #333;
+    height: 100px;
+    flex: 0 0 auto;
+}
+
+.content {
+    background-color: #ddd;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttones {
+    text-align: center;
+    font-size: 16px;
+    color: rgba(0,0,0,0.7);
+    background: linear-gradient(to bottom, #ffcc33, #ffe34a);
+    cursor: pointer;
+    border: none;
+}
+    
+.buttones:hover {
+    background: linear-gradient(to bottom, #ffe34a, #ffdb00);
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.36);
+}
+
+                /* стили для чат */
+.messenger {
+    width: 360px;
+    background-color: #333;
+    border: 1px #39f;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    padding: 10px;
+}
+
+.messenger_layout {
+    height: 400px;
+    width: 340px;
+    background-color: #ddd;
+    border: 1px silver solid;
+    overflow: auto;
+}
+
+.messenger_slider {
+    padding: 0 5px;
+}
+
+.messenger_messageWrapper {
+    margin-bottom: 5px;
+}
+
+.messenger_messageBox {
+    display: inline-block;
+    position: relative;
+    background-color: #cfc;
+    border-radius: 0 5px 5px 5px;
+    padding: 5px 15px 5px 10px;
+    margin-right: 20px;
+    min-width: 100px;
+}
+
+.messenger_messageTime {
+    font-size: 0.7em;
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+}
+
+.messenger form {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
